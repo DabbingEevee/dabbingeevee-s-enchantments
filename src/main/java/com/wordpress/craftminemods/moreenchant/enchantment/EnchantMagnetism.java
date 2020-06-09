@@ -10,34 +10,20 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.client.event.sound.SoundEvent;
 
-public class EnchantBurning extends Enchantment {
+public class EnchantMagnetism extends Enchantment {
 
-	public EnchantBurning() {
+	public EnchantMagnetism() {
 		super(Rarity.VERY_RARE, EnumEnchantmentType.ARMOR, new EntityEquipmentSlot[] { EntityEquipmentSlot.HEAD,
 				EntityEquipmentSlot.CHEST, EntityEquipmentSlot.LEGS, EntityEquipmentSlot.FEET });
-		this.setRegistryName("ignition");
-		this.setName("ignition");
+		this.setRegistryName("magnetism");
+		this.setName("magnetism");
 		;
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean canApplyTogether(Enchantment ench) {
-		if (ench == Enchantments.FIRE_PROTECTION) {
-			return false;
-		} else {
 			return true;
-		}
-	}
-
-	@Override
-	public void onEntityDamaged(EntityLivingBase user, Entity target, int level) {
-		if (user.isBurning()) {
-			target.setFire(5 + level * 2);
-			target.attackEntityFrom(DamageSource.ON_FIRE, (float) level * 2);
-		} else {
-			target.playSound(SoundEvents.BLOCK_FIRE_EXTINGUISH, 1, 1);
-		}
 	}
 
 	@Override

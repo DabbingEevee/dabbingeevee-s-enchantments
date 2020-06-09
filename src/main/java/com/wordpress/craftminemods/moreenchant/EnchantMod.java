@@ -5,6 +5,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
 import com.wordpress.craftminemods.moreenchant.enchantment.ModEnchantments;
@@ -28,6 +30,7 @@ public class EnchantMod
     public void init(FMLInitializationEvent event)
     {
     	ModEnchantments.init();
+    	logger.log(Level.INFO, "DE Enchant Init Begins now");
         // some example code
     }
 }
