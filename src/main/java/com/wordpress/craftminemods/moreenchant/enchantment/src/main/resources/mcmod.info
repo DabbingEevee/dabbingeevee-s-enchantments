@@ -1,0 +1,16 @@
+[
+{
+  "modid": "deenchantmod",
+  "name": "Dabbingeevee's More Enchants",
+  "description": "Dabbingeevee's More Enchants",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["DabbingEevee"],
+  "credits": "he made the mod",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
